@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стоматология | Доктор Мага</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Декоративные частицы фона -->
+    <div class="particles-container" id="particles"></div>
+
+    <!-- Плавающие зубные элементы -->
+    <div class="floating-teeth">
+        <span class="floating-tooth tooth-1">🦷</span>
+        <span class="floating-tooth tooth-2">🦷</span>
+        <span class="floating-tooth tooth-3">✨</span>
+        <span class="floating-tooth tooth-4">🪥</span>
+        <span class="floating-tooth tooth-5">💎</span>
+        <span class="floating-tooth tooth-6">🦷</span>
+    </div>
+
+    <!-- Кнопка переключения темы -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        <span class="theme-icon sun">☀️</span>
+        <span class="theme-icon moon">🌙</span>
+        <span class="theme-toggle-glow"></span>
+    </button>
+
+    <!-- Шапка -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 60 60" class="logo-svg">
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00d4ff"/>
+                                <stop offset="100%" style="stop-color:#0099ff"/>
+                            </linearGradient>
+                        </defs>
+                        <ellipse cx="30" cy="28" rx="18" ry="22" fill="white" stroke="url(#logoGrad)" stroke-width="3"/>
+                        <path d="M20 20 Q30 8 40 20" fill="white" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="22" cy="26" r="3" fill="url(#logoGrad)"/>
+                        <circle cx="38" cy="26" r="3" fill="url(#logoGrad)"/>
+                        <path d="M25 35 Q30 42 35 35" fill="none" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <span class="logo-text">Denta<span class="logo-highlight">Magic</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">О нас</a></li>
+                <li><a href="#prices" class="nav-link">Услуги и цены</a></li>
+                <li><a href="#promo" class="nav-link">Акция</a></li>
+                <li><a href="#contact" class="nav-link">Контакты</a></li>
+            </ul>
+            <div class="nav-phone">
+                <a href="tel:+79667222244" class="phone-link pulse-phone">+7(966)722-22-44</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero" id="hero">
+        <div class="hero-blob blob-1"></div>
+        <div class="hero-blob blob-2"></div>
+        <div class="hero-blob blob-3"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span> Доктор Мага
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Ваша улыбка —</span>
+                <span class="title-line gradient-text" id="typewriter-target">наша профессия</span>
+                <span class="title-cursor">|</span>
+            </h1>
+            <p class="hero-subtitle">
+                Современная стоматология с заботой о каждом пациенте. <br>
+                Инновационное оборудование, безболезненное лечение, доступные цены.
+            </p>
+            <div class="hero-buttons">
+                <a href="#prices" class="btn btn-primary ripple-btn">
+                    <span>Смотреть цены</span>
+                    <svg class="btn-arrow" viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7H7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="#promo" class="btn btn-promo ripple-btn">
+                    <span class="sparkle-icon">🎁</span> Акция 50%
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-tooth-card">
+                <div class="tooth-card-inner">
+                    <svg viewBox="0 0 120 140" class="hero-tooth-svg">
+                        <defs>
+                            <radialGradient id="toothGrad" cx="50%" cy="40%" r="60%">
+                                <stop offset="0%" style="stop-color:#ffffff"/>
+                                <stop offset="70%" style="stop-color:#e8f4f8"/>
+                                <stop offset="100%" style="stop-color:#c8e6f5"/>
+                            </radialGradient>
+                            <filter id="toothShadow">
+                                <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0099ff44"/>
+                            </filter>
+                        </defs>
+                        <ellipse cx="60" cy="65" rx="35" ry="48" fill="url(#toothGrad)" filter="url(#toothShadow)" stroke="#00b8e6" stroke-width="2.5"/>
+                        <path d="M38 45 Q60 18 82 45" fill="white" stroke="#00b8e6" stroke-width="2" stroke-linecap="round"/>
+                        <ellipse cx="46" cy="55" rx="7" ry="8" fill="#f0f9ff" stroke="#00c8f0" stroke-width="1.5"/>
+                        <ellipse cx="74" cy="55" rx="7" ry="8" fill="#f0f9ff" stroke="#00c8f0" stroke-width="1.5"/>
+                        <circle cx="44" cy="53" r="2" fill="#0099dd"/>
+                        <circle cx="72" cy="53" r="2" fill="#0099dd"/>
+                        <path d="M48 78 Q60 95 72 78" fill="none" stroke="#00b8e6" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="60" cy="65" r="3" fill="#00d4ff88" class="tooth-sparkle"/>
+                    </svg>
+                </div>
+                <div class="tooth-card-glow"></div>
+                <div class="tooth-rings">
+                    <span class="ring ring-1"></span>
+                    <span class="ring ring-2"></span>
+                    <span class="ring ring-3"></span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="scroll-mouse">
+                <span class="scroll-dot"></span>
+            </span>
+            <span class="scroll-text">Листайте вниз</span>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section class="about" id="about">
+        <div class="section-header">
+            <span class="section-tag">О клинике</span>
+            <h2 class="section-title">Почему выбирают <span class="gradient-text">нас</span></h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-card tilt-card" data-tilt>
+                <div class="about-card-icon">
+                    <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M20 30 L27 37 L40 23" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h3>Опыт 15+ лет</h3>
+                <p>Доктор Мага имеет более 15 лет практики и тысячи довольных пациентов.</p>
+            </div>
+            <div class="about-card tilt-card" data-tilt>
+                <div class="about-card-icon">
+                    <svg viewBox="0 0 60 60"><rect x="12" y="15" width="36" height="30" rx="5" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="30" cy="30" r="8" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="30" cy="30" r="3" fill="currentColor"/></svg>
+                </div>
+                <h3>Новейшее оборудование</h3>
+                <p>Используем только современные технологии и материалы мировых брендов.</p>
+            </div>
+            <div class="about-card tilt-card" data-tilt>
+                <div class="about-card-icon">
+                    <svg viewBox="0 0 60 60"><path d="M15 45 Q30 15 45 45" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="22" cy="38" r="3" fill="currentColor"/><circle cx="38" cy="38" r="3" fill="currentColor"/></svg>
+                </div>
+                <h3>Без боли</h3>
+                <p>Современная анестезия и бережный подход — вы не почувствуете дискомфорта.</p>
+            </div>
+            <div class="about-card tilt-card" data-tilt>
+                <div class="about-card-icon">
+                    <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="24" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M30 14 L30 30 L42 36" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+                </div>
+                <h3>Работаем быстро</h3>
+                <p>Ценим ваше время — большинство процедур завершаем за одно посещение.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Цены -->
+    <section class="prices" id="prices">
+        <div class="section-header">
+            <span class="section-tag">Прайс-лист</span>
+            <h2 class="section-title">Наши <span class="gradient-text">услуги</span> и цены</h2>
+        </div>
+        <div class="prices-grid">
+            <div class="price-card price-card-featured">
+                <div class="price-card-badge">Популярное</div>
+                <div class="price-card-top">
+                    <div class="price-icon-wrapper">
+                        <svg viewBox="0 0 50 50"><ellipse cx="25" cy="24" rx="12" ry="16" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M16 20 Q25 8 34 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Лечение зуба</h3>
+                </div>
+                <div class="price-amount">
+                    <span class="price-value" data-count="3000">0</span>
+                    <span class="price-currency">₽</span>
+                </div>
+                <p class="price-desc">Лечение кариеса, пульпита, установка пломбы</p>
+                <a href="#contact" class="btn btn-outline ripple-btn">Записаться</a>
+            </div>
+
+            <div class="price-card">
+                <div class="price-card-top">
+                    <div class="price-icon-wrapper">
+                        <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="16" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M18 25 L23 30 L32 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Чистка зубов</h3>
+                </div>
+                <div class="price-amount">
+                    <span class="price-value" data-count="2000">0</span>
+                    <span class="price-currency">₽</span>
+                </div>
+                <p class="price-desc">Профессиональная гигиена, удаление налёта и камня</p>
+                <a href="#contact" class="btn btn-outline ripple-btn">Записаться</a>
+            </div>
+
+            <div class="price-card">
+                <div class="price-card-top">
+                    <div class="price-icon-wrapper">
+                        <svg viewBox="0 0 50 50"><rect x="15" y="10" width="20" height="30" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M20 20 L30 20 M20 26 L30 26 M22 32 L28 32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Удаление зуба</h3>
+                </div>
+                <div class="price-amount">
+                    <span class="price-value" data-count="4000">0</span>
+                    <span class="price-currency">₽</span>
+                </div>
+                <p class="price-desc">Безболезненное удаление любой сложности</p>
+                <a href="#contact" class="btn btn-outline ripple-btn">Записаться</a>
+            </div>
+
+            <div class="price-card price-card-premium">
+                <div class="price-card-badge premium-badge">Премиум</div>
+                <div class="price-card-top">
+                    <div class="price-icon-wrapper">
+                        <svg viewBox="0 0 50 50"><rect x="12" y="18" width="26" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="25" cy="28" r="5" fill="currentColor" opacity="0.5"/></svg>
+                    </div>
+                    <h3>Импланты</h3>
+                </div>
+                <div class="price-amount">
+                    <span class="price-value" data-count="20000">0</span>
+                    <span class="price-currency">₽</span>
+                </div>
+                <p class="price-desc">Установка импланта премиум-класса с гарантией</p>
+                <a href="#contact" class="btn btn-outline ripple-btn">Записаться</a>
+            </div>
+
+            <div class="price-card price-card-special">
+                <div class="price-card-badge special-badge">Комплекс</div>
+                <div class="price-card-top">
+                    <div class="price-icon-wrapper">
+                        <svg viewBox="0 0 50 50"><circle cx="25" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M13 35 L25 20 L37 35" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Брекеты</h3>
+                </div>
+                <div class="price-amount">
+                    <span class="price-value" data-count="67000">0</span>
+                    <span class="price-currency">₽</span>
+                </div>
+                <p class="price-desc">Полный курс ортодонтического лечения брекет-системой</p>
+                <a href="#contact" class="btn btn-outline ripple-btn">Записаться</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Акция -->
+    <section class="promo" id="promo">
+        <div class="promo-sparkles" id="promoSparkles"></div>
+        <div class="promo-container">
+            <div class="promo-glow-left"></div>
+            <div class="promo-glow-right"></div>
+            <div class="promo-content">
+                <div class="promo-icon-big">
+                    <span class="promo-emoji">🎉</span>
+                    <span class="promo-emoji-secondary">🤝</span>
+                </div>
+                <h2 class="promo-title">
+                    Приведи друга — <br>
+                    <span class="promo-highlight">получите скидку 50%</span> каждый!
+                </h2>
+                <p class="promo-text">
+                    Уникальная акция! Приводите друга на любую процедуру, и вы <strong>оба</strong> получаете скидку <strong>50%</strong>.
+                    Лечитесь вместе — экономьте вместе!
+                </p>
+                <div class="promo-conditions">
+                    <div class="promo-condition">
+                        <span class="condition-icon">👤</span>
+                        <span>Вы получаете <strong>50%</strong> скидку</span>
+                    </div>
+                    <div class="promo-condition">
+                        <span class="condition-icon">👥</span>
+                        <span>Друг получает <strong>50%</strong> скидку</span>
+                    </div>
+                </div>
+                <a href="#contact" class="btn btn-promo-big ripple-btn">
+                    <span>Записаться по акции</span>
+                    <span class="btn-sparkle">✨</span>
+                </a>
+                <div class="promo-timer">
+                    <span class="timer-dot"></span> Акция ограничена — успейте записаться!
+                </div>
+            </div>
+            <div class="promo-visual">
+                <div class="promo-circle-anim">
+                    <svg viewBox="0 0 200 200" class="promo-circle-svg">
+                        <defs>
+                            <linearGradient id="promoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ff6b6b"/>
+                                <stop offset="50%" style="stop-color:#ffa500"/>
+                                <stop offset="100%" style="stop-color:#ffdd00"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="100" cy="100" r="85" fill="none" stroke="url(#promoGrad)" stroke-width="4" stroke-dasharray="540" stroke-dashoffset="0"/>
+                        <text x="100" y="90" text-anchor="middle" font-size="48" font-weight="bold" fill="url(#promoGrad)">50%</text>
+                        <text x="100" y="115" text-anchor="middle" font-size="16" fill="currentColor" opacity="0.7">СКИДКА</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <span class="section-tag">Свяжитесь с нами</span>
+            <h2 class="section-title">Как нас <span class="gradient-text">найти</span></h2>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-card address-card tilt-card" data-tilt>
+                <div class="contact-card-icon">📍</div>
+                <h3>Адрес</h3>
+                <p>ул. Пушкина</p>
+                <span class="contact-sub">Удобное расположение в центре города</span>
+            </div>
+            <div class="contact-card phone-card tilt-card" data-tilt>
+                <div class="contact-card-icon">📞</div>
+                <h3>Телефон</h3>
+                <a href="tel:+79667222244" class="contact-phone-link">+7(966)722-22-44</a>
+                <span class="contact-sub">Звоните с 9:00 до 21:00</span>
+            </div>
+            <div class="contact-card hours-card tilt-card" data-tilt>
+                <div class="contact-card-icon">🕒</div>
+                <h3>Часы работы</h3>
+                <p>Пн–Пт: 9:00 – 21:00</p>
+                <p>Сб–Вс: 10:00 – 18:00</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-copy">© 2026 Стоматология DentaMagic. Доктор Мага.</p>
+            <p class="footer-address">ул. Пушкина | +7(966)722-22-44</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Генерация частиц фона ---
+        (function() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                const size = Math.random() * 8 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (Math.random() * 20 + 15) + 's';
+                container.appendChild(particle);
+            }
+        })();
+
+        // --- Искры в акции ---
+        (function() {
+            const sparklesContainer = document.getElementById('promoSparkles');
+            for (let i = 0; i < 20; i++) {
+                const sparkle = document.createElement('span');
+                sparkle.classList.add('sparkle');
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.animationDelay = Math.random() * 3 + 's';
+                sparkle.style.animationDuration = (Math.random() * 2 + 1.5) + 's';
+                sparklesContainer.appendChild(sparkle);
+            }
+        })();
+
+        // --- Переключение темы ---
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const savedTheme = localStorage.getItem('denta-theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-theme');
+        }
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            const isDark = body.classList.contains('dark-theme');
+            localStorage.setItem('denta-theme', isDark ? 'dark' : 'light');
+        });
+
+        // --- Эффект печатной машинки ---
+        const typewriterElement = document.getElementById('typewriter-target');
+        const phrases = ['наша профессия', 'наша забота', 'наше призвание'];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        function typeWriter() {
+            const currentPhrase = phrases[phraseIndex];
+            if (isDeleting) {
+                typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                setTimeout(typeWriter, 2000);
+                return;
+            }
+            if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(typeWriter, 500);
+                return;
+            }
+            const speed = isDeleting ? 50 : 100;
+            setTimeout(typeWriter, speed);
+        }
+        typeWriter();
+
+        // --- Счётчик цен ---
+        const priceValues = document.querySelectorAll('.price-value');
+        const observerOptions = { threshold: 0.3 };
+        const priceObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.getAttribute('data-count'), 10);
+                    animateValue(el, 0, target, 1500);
+                    priceObserver.unobserve(el);
+                }
+            });
+        }, observerOptions);
+        priceValues.forEach(el => priceObserver.observe(el));
+
+        function animateValue(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const current = Math.floor(progress * (end - start) + start);
+                element.textContent = current.toLocaleString('ru-RU');
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    element.textContent = end.toLocaleString('ru-RU');
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // --- Ripple-эффект на кнопках ---
+        document.querySelectorAll('.ripple-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                ripple.classList.add('ripple-effect');
+                const rect = btn.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+                ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+                btn.appendChild(ripple);
+                ripple.addEventListener('animationend', () => ripple.remove());
+            });
+        });
+
+        // --- Tilt-эффект на карточках (упрощённый) ---
+        document.querySelectorAll('.tilt-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                card.style.transform = `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(600px) rotateX(0) rotateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
